@@ -1,0 +1,185 @@
+html,body{
+    margin: 0;
+}
+.head-fix{
+    width: 100%;
+    height: 15px;
+    padding: 5px;
+    /* margin: 5px; */
+    background-color: red;
+    margin-bottom: 30px;
+}
+.right,.left
+{
+    text-align: center;
+    width: 50%;
+    margin: 0 !important;
+}
+.right a, .left a{
+    padding-left: 10px;
+    text-decoration: none;
+    color: white;
+}
+.telephone , .mail, .location{
+    height: 10px;
+    width: 10px;
+}
+.header-left, .left
+{
+    float: left;
+}
+.header-right, .right{
+    float: right;
+    margin-left: 50px;
+}
+.header-right div{
+    padding: 3px;
+}
+.header, .header-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header-1
+{
+    height: 30px;
+    width: 100%;
+}
+.header-1>a , .header-1 .drop-list
+{
+    padding: 0 10px 0 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(75, 71, 71);
+    text-decoration: none;
+    border-bottom: solid 4px rgb(75, 71, 71);
+}
+li.drop-list>a{
+    font-weight: bolder;
+    color: rgb(75, 71, 71);
+    text-decoration: none;
+    border-bottom: solid 1px white;
+}
+.header-1 a:hover
+{
+    color: red;
+    border-bottom: solid 4px red;
+}
+.arrow{
+    height: 10px;
+    width: 10px;
+}
+.header-1 li{
+    list-style: none;
+}
+.drop-list
+{
+    position: relative;
+    /* display: inline-block; */
+}
+.list-honda
+{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    margin-top: 2px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.header-1 li.drop-list div.list-honda>a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background-color: red;
+    font-size: 15px;
+    font-weight: normal;
+    border-bottom: 1px solid white;
+}
+.drop-list:hover .list-honda{
+    display: block;
+}
+.header-1 li.drop-list div.list-honda>a:hover
+{
+    color: orange;
+}
+.arrow-left:hover{
+    color: red;
+}
+.item-car
+{
+    height: 450px;
+    margin: 0 50px 0 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-car:hover .pre-next
+{
+    display: block;
+}
+.item-car .pre-next
+{
+    /* position: absolute; */
+    width: 100%;
+    z-index: 2;
+}
+.pre-next{
+    position: absolute;
+    display: none;
+}
+.items
+{
+    display: none;
+    animation-name: fade1;
+    animation-duration: 1.5s;
+}
+.pre-next>.pre-next-left
+{
+
+    float: left;
+}
+.pre-next>.pre-next-right
+{
+
+    float: right;
+}
+.pre-next .arrow-left,.pre-next .arrow-right
+{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.items img
+{
+    width: 100%;
+    height: 100%;
+}
+.items.active
+{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+@keyframes fade1 {
+    from {opacity: 1} 
+    to {opacity: 0.4}
+}
+.arrow-left:hover
+{
+    content: url("../svg/left-arrow-red.svg");
+}
+.arrow-right:hover
+{
+    content: url("../svg/right-arrow-red.svg");
+}
